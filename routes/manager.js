@@ -17,4 +17,5 @@ router.put('/changePassword', manager_controller.change_password);
 
 router.post('/upload', manager_controller.upload);
 
+
 module.exports = router;

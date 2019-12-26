@@ -10,6 +10,7 @@ var dotenv = require('dotenv');
 
 var indexRouter = require('./routes/index');
 var managerRouter = require('./routes/manager');
+var userRouter = require('./routes/user');
 var cors = require('cors');
 
 var app = express();
@@ -47,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/manager', managerRouter);
-
+app.use('/user', userRouter);
 //parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 //parse application/json
